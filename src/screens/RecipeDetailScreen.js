@@ -47,7 +47,7 @@ export default function RecipeDetailScreen(props) {
     };
 
     useEffect(() => {
-        const apiEndpoint = `http://192.168.237.134:5000/api/HotandHumid/${item.id}`;
+        const apiEndpoint = `http://192.168.133.134:5000/api/recipe/${item.id}`;
         console.log(apiEndpoint);
         getMealData(apiEndpoint);
       }, []);
@@ -224,9 +224,13 @@ export default function RecipeDetailScreen(props) {
                         <Text style={{fontSize: hp(2.5)}} className="font-bold flex-1 text-neutral-700">
                             Instructions
                         </Text>
-                        <Text style={{fontSize: hp(1.6)}} className="text-neutral-700">
-                            {meal?.Instruction}
-                        </Text>
+                        <View className="space-y-2 ml-3">
+                                      {meal?.Instruction.split('.').map((Instruction, index) => (
+                                          <Text key={index} style={{ fontSize: hp(1.7) }} className="font-medium text-neutral-700">
+                                              {`\u2022 ${Instruction}`}
+                                          </Text>
+                                      ))}
+                                  </View>
                     </Animated.View>
 
                     

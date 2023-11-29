@@ -25,7 +25,7 @@ export default function HomeScreen() {
 
   const getRecipes = async () => {
     try {
-      const response = await axios.get('http://192.168.237.134:5000/api/HotandHumid');
+      const response = await axios.get('http://192.168.133.134:5000/api/recipe');
       const data = response.data;
       setMeals(data.recipes);
   

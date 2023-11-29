@@ -85,6 +85,19 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 10,
     backgroundColor: '#0077B6'
   },
+  bottomContainer: {
+    flexDirection: 'row',
+    width: '96%',
+    borderWidth: 1,
+    justifyContent: 'space-between',
+    borderColor: '#78aed3',
+    padding: 20,
+    borderBottomRightRadius: 10,
+    borderBottomLeftRadius: 10,
+    backgroundColor: '#78aed3', 
+    marginLeft: 12,
+    marginRight: 12
+  },
   weatherInfo: {
     flex: 1,
   },
@@ -119,19 +132,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
-  bottomContainer: {
-    flexDirection: 'row',
-    width: '98.5%',
-    borderWidth: 1,
-    justifyContent: 'space-between',
-    borderColor: '#78aed3',
-    padding: 20,
-    borderBottomRightRadius: 10,
-    borderBottomLeftRadius: 10,
-    backgroundColor: '#78aed3', 
-    marginLeft: 12,
-    marginRight: 12
-  },
+  
 });
 
 export default WeatherContainer;
